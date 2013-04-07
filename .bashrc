@@ -16,7 +16,7 @@ export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \W \$\[\033[00m\] '
 
 # もろもろ環境変数を設定
 export PATH=$PATH:/sbin:/usr/sbin # パス
-export PAGER='/usr/bin/lv -c' # man とかで使われる
+export PAGER='/usr/local/bin/lv -c' # man とかで使われる
 #export EDITOR='/usr/bin/vim' # visudo とかで使われる
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 export HISTSIZE=1000 # これだけコマンド履歴を残す
