@@ -14,8 +14,8 @@ alias ll='ls -AlFh --show-control-chars --color=auto'
 alias la='ls -CFal'
 alias ps='ps --sort=start_time'
 #alias vi='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias vim='vi'
- 
+#alias vim='vi'
+
 # プロンプトの表示をカスタマイズ
 export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \W \$\[\033[00m\] '
 
