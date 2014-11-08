@@ -265,11 +265,11 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 "let g:neocomplcache_enable_underbar_completion = 1
 
 " Define dictionary.
-let g:neocomplcache_dictionary_filetype_lists = {
-    \ 'default' : '',
-    \ 'vimshell' : /home/zuu.'/.vimshell_hist',
-    \ 'scheme' : /home/zuu.'/.gosh_completions'
-        \ }
+"let g:neocomplcache_dictionary_filetype_lists = {
+"    \ 'default' : '',
+"    \ 'vimshell' : ~/.'/.vimshell_hist',
+"    \ 'scheme' : ~/.'/.gosh_completions'
+"        \ }
 
 " Define keyword.
 if !exists('g:neocomplcache_keyword_patterns')

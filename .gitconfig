@@ -1,0 +1,21 @@
+[user]
+  name = tabei
+  email = kazunari-tabei@hands-lab.com
+[color]
+  ui = true
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  br = branch
+  pl = pull
+  rb = rebase
+  d  = diff
+  dc = diff --cached
+  l  = log
+  ls  = log --stat
+  lp  = log -p
+[core]
+  excludesfile = ~/.gitexcludes
+[credential]
+  helper = cache
