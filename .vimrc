@@ -45,6 +45,9 @@ NeoBundle 'tomasr/molokai'
 
 NeoBundle 'mattn/emmet-vim'
 
+NeoBundle 'deris/vim-shot-f'
+NeoBundle 'cohama/lexima.vim'
+
 " Required:
 call neobundle#end()
 
