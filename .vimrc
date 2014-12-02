@@ -28,9 +28,10 @@ NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-surround'
-"NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'deris/vim-shot-f'
 
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
@@ -45,8 +46,6 @@ NeoBundle 'tomasr/molokai'
 
 NeoBundle 'mattn/emmet-vim'
 
-NeoBundle 'deris/vim-shot-f'
-NeoBundle 'cohama/lexima.vim'
 
 " Required:
 call neobundle#end()
