@@ -76,6 +76,9 @@ set autoread
 " スワップファイルの作成は行わない
 "set noswapfile
 
+" undoファイルを作らない
+set noundofile
+
 " 保存しないで他のファイルを表示することが出来るようにする
 set hidden
 

@@ -25,7 +25,7 @@ export PS1='\[\033[01;32m\]\u@\H\[\033[01;34m\] \W \$\[\033[00m\] '
 # 共通の環境変数
 export HISTSIZE=1000 # これだけコマンド履歴を残す
 export LANG='ja_JP.UTF-8' # 以下 3 つ文字コード
-export LC_ALL='ja_JP.UTF-8'
+#export LC_ALL='ja_JP.UTF-8'
 export LC_MESSAGES='ja_JP.UTF-8'
 
 # OS判定
