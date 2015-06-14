@@ -1,3 +1,5 @@
+" .vimrc
+
 "-------------------------------------------------
 " NeoBundle プラグイン管理
 "-------------------------------------------------
@@ -16,21 +18,26 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
+NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
+
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'scrooloose/syntastic'
+
 NeoBundle 'tpope/vim-fugitive'
+
 NeoBundle 'tpope/vim-surround'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'deris/vim-shot-f'
+
 NeoBundle 'scrooloose/nerdtree'
+
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'bronson/vim-trailing-whitespace'
-NeoBundle 'deris/vim-shot-f'
 
 NeoBundle 'Shougo/vimproc', {
       \ 'build' : {
@@ -43,8 +50,9 @@ NeoBundle 'Shougo/vimproc', {
 
 NeoBundle 'tomasr/molokai'
 
-NeoBundle 'mattn/emmet-vim'
-
+"NeoBundle 'kurocode25/mdforvim'
+NeoBundle 'kannokanno/previm'
+NeoBundle 'plasticboy/vim-markdown'
 
 " Required:
 call neobundle#end()
@@ -256,7 +264,6 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 " neocomplcache もしくは neocomplete
 
 " if_luaが有効ならneocompleteを使う
-NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 if neobundle#is_installed('neocomplete')
     " neocomplete用設定
     let g:neocomplete#enable_at_startup = 1
@@ -312,3 +319,12 @@ endif
 
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
+
+
+
+" ---------------
+"  Markdown関連
+
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a FirefoxDeveloperEdition'
+
