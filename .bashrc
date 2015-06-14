@@ -41,6 +41,7 @@ case "${OS}" in
         if [ -d /Applications/MacVim.app ]; then # MacVimが存在するならば
             alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
             alias vi=vim
+            export PATH="/Applications/MacVim.app/Contents/MacOS/mvim:$PATH"
         fi
         # GNU coreutils
         export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
