@@ -39,16 +39,18 @@ fi
 case "${OS}" in
     Mac) # OSがMacならば
         if [ -d /Applications/MacVim.app ]; then # MacVimが存在するならば
-            alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
-            alias vi=vim
-            export PATH="/Applications/MacVim.app/Contents/MacOS/mvim:$PATH"
+          alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+          alias vi="vim"
+          export PATH="/Applications/MacVim.app/Contents/MacOS/mvim:$PATH"
+          export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim" # visudo とかで使われる
+        else
+          export EDITOR='/usr/bin/vim' # visudo とかで使われる
         fi
         # GNU coreutils
         export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
         export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
         # その他
         export PAGER='/usr/bin/less' # man とかで使われる
-        export EDITOR='/usr/bin/vim' # visudo とかで使われる
         ;;
     Linux)
 	if [ -d /home/TOOL -a -d /home/UTL ]; then
