@@ -41,7 +41,7 @@ case "${OS}" in
         if [ -d /Applications/MacVim.app ]; then # MacVimが存在するならば
           alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
           alias vi="vim"
-          export PATH="/Applications/MacVim.app/Contents/MacOS/mvim:$PATH"
+          export PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
           export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim" # visudo とかで使われる
         else
           export EDITOR='/usr/bin/vim' # visudo とかで使われる
