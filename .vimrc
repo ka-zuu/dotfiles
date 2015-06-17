@@ -323,7 +323,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 " ---------------
 "  Markdown関連
 
-au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.{md,txt} set filetype=markdown
 let g:previm_open_cmd = 'open -a FirefoxDeveloperEdition'
 
 let g:vim_markdown_folding_disabled=1
