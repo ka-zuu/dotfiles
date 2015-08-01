@@ -52,7 +52,9 @@ NeoBundle 'tomasr/molokai'
 
 "NeoBundle 'kurocode25/mdforvim'
 NeoBundle 'kannokanno/previm'
-NeoBundle 'plasticboy/vim-markdown'
+"NeoBundle 'plasticboy/vim-markdown'
+
+NeoBundle 'yuratomo/w3m.vim'
 
 " Required:
 call neobundle#end()
