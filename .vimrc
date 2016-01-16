@@ -246,6 +246,9 @@ inoremap <C-f> <Right>
 inoremap <C-h> <BS>
 inoremap <C-d> <Del>
 
+" 縦分割版gf
+nnoremap gs :vertical wincmd f<CR>
+
 "-------------------------------------------------
 " プラグイン関連
 "-------------------------------------------------
