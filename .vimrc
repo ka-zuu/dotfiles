@@ -1,70 +1,133 @@
 " .vimrc
 
-"-------------------------------------------------
-" NeoBundle プラグイン管理
-"-------------------------------------------------
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-    endif
+if &compatible
+  set nocompatible
+endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle'))
-
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-" My Bundles here:
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
-
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'othree/html5.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'pangloss/vim-javascript'
-
-NeoBundle 'tpope/vim-fugitive'
-
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'deris/vim-shot-f'
-
-NeoBundle 'scrooloose/nerdtree'
-
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'bronson/vim-trailing-whitespace'
-
-NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-
-NeoBundle 'tomasr/molokai'
-
-"NeoBundle 'kurocode25/mdforvim'
-NeoBundle 'kannokanno/previm'
-"NeoBundle 'plasticboy/vim-markdown'
-
-NeoBundle 'yuratomo/w3m.vim'
+set runtimepath+=/Users/tabei/.vim/dein.vim//repos/github.com/Shougo/dein.vim
 
 " Required:
-call neobundle#end()
+call dein#begin('/Users/tabei/.vim/dein.vim/')
 
-" ファイル形式別プラグインのロードを有効化
+" My plugins
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+
+call dein#add('scrooloose/syntastic')
+call dein#add('othree/html5.vim')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('pangloss/vim-javascript')
+
+call dein#add('tpope/vim-fugitive')
+
+call dein#add('tpope/vim-surround')
+call dein#add('mattn/emmet-vim')
+call dein#add('deris/vim-shot-f')
+
+call dein#add('scrooloose/nerdtree')
+
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('bronson/vim-trailing-whitespace')
+call dein#add('tomasr/molokai')
+
+call dein#add('koron/minimap-vim')
+
+call dein#add('vim-airline/vim-airline')
+
+
+"NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
+"NeoBundle 'Shougo/vimproc', {
+"      \ 'build' : {
+"      \     'windows' : 'make -f make_mingw32.mak',
+"      \     'cygwin' : 'make -f make_cygwin.mak',
+"      \     'mac' : 'make -f make_mac.mak',
+"      \     'unix' : 'make -f make_unix.mak',
+"      \    },
+"      \ }
+"
+
+call dein#end()
+
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+
+""-------------------------------------------------
+"" NeoBundle プラグイン管理
+""-------------------------------------------------
+"if has('vim_starting')
+"  set nocompatible               " Be iMproved
+"
+"  " Required:
+"    set runtimepath+=~/.vim/bundle/neobundle.vim/
+"    endif
+"
+"" Required:
+"call neobundle#begin(expand('~/.vim/bundle'))
+"
+"" Let NeoBundle manage NeoBundle
+"" Required:
+"NeoBundleFetch 'Shougo/neobundle.vim'
+"
+"" My Bundles here:
+"NeoBundle 'Shougo/unite.vim'
+"NeoBundle 'Shougo/neosnippet.vim'
+"NeoBundle 'Shougo/neosnippet-snippets'
+"NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
+"
+"NeoBundle 'scrooloose/syntastic'
+"NeoBundle 'othree/html5.vim'
+"NeoBundle 'hail2u/vim-css3-syntax'
+"NeoBundle 'pangloss/vim-javascript'
+"
+"NeoBundle 'tpope/vim-fugitive'
+"
+"NeoBundle 'tpope/vim-surround'
+"NeoBundle 'mattn/emmet-vim'
+"NeoBundle 'deris/vim-shot-f'
+"
+"NeoBundle 'scrooloose/nerdtree'
+"
+"NeoBundle 'nathanaelkane/vim-indent-guides'
+"NeoBundle 'bronson/vim-trailing-whitespace'
+"
+"NeoBundle 'Shougo/vimproc', {
+"      \ 'build' : {
+"      \     'windows' : 'make -f make_mingw32.mak',
+"      \     'cygwin' : 'make -f make_cygwin.mak',
+"      \     'mac' : 'make -f make_mac.mak',
+"      \     'unix' : 'make -f make_unix.mak',
+"      \    },
+"      \ }
+"
+"NeoBundle 'tomasr/molokai'
+"
+""NeoBundle 'kurocode25/mdforvim'
+"NeoBundle 'kannokanno/previm'
+""NeoBundle 'plasticboy/vim-markdown'
+"
+"NeoBundle 'yuratomo/w3m.vim'
+"
+"" Required:
+"call neobundle#end()
+"
+"" ファイル形式別プラグインのロードを有効化
+"filetype plugin indent on
+"
+"" If there are uninstalled bundles found on startup,
+"" this will conveniently prompt you to install them.
+"NeoBundleCheck
 
 
 "-------------------------------------------------
@@ -272,33 +335,33 @@ au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
 
-" ----------------
-" neocomplcache もしくは neocomplete
-
-" if_luaが有効ならneocompleteを使う
-if neobundle#is_installed('neocomplete')
-    " neocomplete用設定
-    let g:neocomplete#enable_at_startup = 1
-    let g:neocomplete#enable_ignore_case = 1
-    let g:neocomplete#enable_smart_case = 1
-    if !exists('g:neocomplete#keyword_patterns')
-        let g:neocomplete#keyword_patterns = {}
-    endif
-    let g:neocomplete#keyword_patterns._ = '\h\w*'
-elseif neobundle#is_installed('neocomplcache')
-    " neocomplcache用設定
-    let g:neocomplcache_enable_at_startup = 1
-    let g:neocomplcache_enable_ignore_case = 1
-    let g:neocomplcache_enable_smart_case = 1
-    if !exists('g:neocomplcache_keyword_patterns')
-        let g:neocomplcache_keyword_patterns = {}
-    endif
-    let g:neocomplcache_keyword_patterns._ = '\h\w*'
-    let g:neocomplcache_enable_camel_case_completion = 1
-    let g:neocomplcache_enable_underbar_completion = 1
-endif
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+"" ----------------
+"" neocomplcache もしくは neocomplete
+"
+"" if_luaが有効ならneocompleteを使う
+"if neobundle#is_installed('neocomplete')
+"    " neocomplete用設定
+"    let g:neocomplete#enable_at_startup = 1
+"    let g:neocomplete#enable_ignore_case = 1
+"    let g:neocomplete#enable_smart_case = 1
+"    if !exists('g:neocomplete#keyword_patterns')
+"        let g:neocomplete#keyword_patterns = {}
+"    endif
+"    let g:neocomplete#keyword_patterns._ = '\h\w*'
+"elseif neobundle#is_installed('neocomplcache')
+"    " neocomplcache用設定
+"    let g:neocomplcache_enable_at_startup = 1
+"    let g:neocomplcache_enable_ignore_case = 1
+"    let g:neocomplcache_enable_smart_case = 1
+"    if !exists('g:neocomplcache_keyword_patterns')
+"        let g:neocomplcache_keyword_patterns = {}
+"    endif
+"    let g:neocomplcache_keyword_patterns._ = '\h\w*'
+"    let g:neocomplcache_enable_camel_case_completion = 1
+"    let g:neocomplcache_enable_underbar_completion = 1
+"endif
+"inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 
 " ----------------
 " gjslint
