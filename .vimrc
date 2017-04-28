@@ -39,7 +39,7 @@ call dein#add('tomasr/molokai')
 call dein#add('koron/minimap-vim')
 
 call dein#add('vim-airline/vim-airline')
-
+call dein#add('vim-scripts/vim-auto-save')
 
 "NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 "NeoBundle 'Shougo/vimproc', {
@@ -203,7 +203,7 @@ set mouse=
 "set ttymouse=xterm
 
 " ステータスラインの設定
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 
 " Vimを使ってくれてありがとうを消すため
 set notitle
@@ -402,4 +402,9 @@ au BufRead,BufNewFile *.{md,txt} set filetype=markdown
 let g:previm_open_cmd = 'open -a FirefoxDeveloperEdition'
 
 let g:vim_markdown_folding_disabled=1
+
+" ---------------
+" vim-auto-save
+"let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 
