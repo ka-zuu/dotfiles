@@ -231,6 +231,9 @@ colorscheme molokai
 " 行番号を表示する。
 set number
 
+" 相対行番号を表示する。
+set relativenumber
+
 " 閉じ括弧が入力されたとき、対応する開き括弧にわずかの間ジャンプする
 set showmatch
 
