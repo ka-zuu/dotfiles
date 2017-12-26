@@ -41,6 +41,8 @@ call dein#add('koron/minimap-vim')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-scripts/vim-auto-save')
 
+"call dein#add('kannokanno/previm')
+
 "NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 "NeoBundle 'Shougo/vimproc', {
 "      \ 'build' : {
@@ -232,7 +234,9 @@ colorscheme molokai
 set number
 
 " 相対行番号を表示する。
-set relativenumber
+"set relativenumber
+" トグル設定
+nnoremap <C-N> :<C-u>setlocal relativenumber!<CR>
 
 " 閉じ括弧が入力されたとき、対応する開き括弧にわずかの間ジャンプする
 set showmatch
@@ -401,13 +405,14 @@ let g:indent_guides_enable_on_vim_startup = 1
 " ---------------
 "  Markdown関連
 
-au BufRead,BufNewFile *.{md,txt} set filetype=markdown
-let g:previm_open_cmd = 'open -a FirefoxDeveloperEdition'
+autocmd BufRead,BufNewFile *.{md,mkd,txt} set filetype=markdown
+" let g:previm_open_cmd = 'open -a Safari'
+" nnoremap <silent> <C-p> :PrevimOpen<CR>
 
-let g:vim_markdown_folding_disabled=1
+" let g:vim_markdown_folding_disabled=1
 
 " ---------------
 " vim-auto-save
-"let g:auto_save = 1
+let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
 
