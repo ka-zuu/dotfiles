@@ -5,10 +5,10 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/tabei/.vim/dein.vim//repos/github.com/Shougo/dein.vim
+set runtimepath+=/Users/tabei/.vim/bundles/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/Users/tabei/.vim/dein.vim/')
+call dein#begin('/Users/tabei/.vim/bundles/')
 
 " My plugins
 call dein#add('Shougo/dein.vim')
