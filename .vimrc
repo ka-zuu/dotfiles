@@ -65,73 +65,6 @@ if dein#check_install()
 endif
 
 
-""-------------------------------------------------
-"" NeoBundle プラグイン管理
-""-------------------------------------------------
-"if has('vim_starting')
-"  set nocompatible               " Be iMproved
-"
-"  " Required:
-"    set runtimepath+=~/.vim/bundle/neobundle.vim/
-"    endif
-"
-"" Required:
-"call neobundle#begin(expand('~/.vim/bundle'))
-"
-"" Let NeoBundle manage NeoBundle
-"" Required:
-"NeoBundleFetch 'Shougo/neobundle.vim'
-"
-"" My Bundles here:
-"NeoBundle 'Shougo/unite.vim'
-"NeoBundle 'Shougo/neosnippet.vim'
-"NeoBundle 'Shougo/neosnippet-snippets'
-"NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
-"
-"NeoBundle 'scrooloose/syntastic'
-"NeoBundle 'othree/html5.vim'
-"NeoBundle 'hail2u/vim-css3-syntax'
-"NeoBundle 'pangloss/vim-javascript'
-"
-"NeoBundle 'tpope/vim-fugitive'
-"
-"NeoBundle 'tpope/vim-surround'
-"NeoBundle 'mattn/emmet-vim'
-"NeoBundle 'deris/vim-shot-f'
-"
-"NeoBundle 'scrooloose/nerdtree'
-"
-"NeoBundle 'nathanaelkane/vim-indent-guides'
-"NeoBundle 'bronson/vim-trailing-whitespace'
-"
-"NeoBundle 'Shougo/vimproc', {
-"      \ 'build' : {
-"      \     'windows' : 'make -f make_mingw32.mak',
-"      \     'cygwin' : 'make -f make_cygwin.mak',
-"      \     'mac' : 'make -f make_mac.mak',
-"      \     'unix' : 'make -f make_unix.mak',
-"      \    },
-"      \ }
-"
-"NeoBundle 'tomasr/molokai'
-"
-""NeoBundle 'kurocode25/mdforvim'
-"NeoBundle 'kannokanno/previm'
-""NeoBundle 'plasticboy/vim-markdown'
-"
-"NeoBundle 'yuratomo/w3m.vim'
-"
-"" Required:
-"call neobundle#end()
-"
-"" ファイル形式別プラグインのロードを有効化
-"filetype plugin indent on
-"
-"" If there are uninstalled bundles found on startup,
-"" this will conveniently prompt you to install them.
-"NeoBundleCheck
-
-
 "-------------------------------------------------
 " 基本設定
 "-------------------------------------------------
@@ -415,4 +348,15 @@ autocmd BufRead,BufNewFile *.{md,mkd,txt} set filetype=markdown
 " vim-auto-save
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0  " do not save while in insert mode
+
+" ---------------
+" NERDtree
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" NERDTreeでルートを変更したらchdirする
+"let g:NERDTreeChDirMode = 2
+
+
+
+
 
